@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EnrolmentClassLibrary
 {
-    public class Program
+    public class Program : Utility
     {
         static void Main(string[] args)
         {
@@ -58,6 +58,20 @@ namespace EnrolmentClassLibrary
             {
                 Console.WriteLine(c);
             }
+
+            Console.WriteLine("\nTesting bubble sort ascending");
+            List<Course> cList = new List<Course>();
+
+            cList.Add(c1);
+            cList.Add(c2);
+            cList.Add(c3);
+            cList.Add(new Course ("POTS", "Potions", 154.32));
+            cList.Add(new Course("TRAN", "Transfiguration", 233.45));
+            cList.Add(new Course ("MUGL", "Muggle Studies", 100.23));
+
+             bubble_sort_asc();
+    
+
 
             Console.ReadLine();
         }

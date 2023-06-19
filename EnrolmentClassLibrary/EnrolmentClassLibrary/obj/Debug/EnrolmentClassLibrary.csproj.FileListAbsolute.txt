@@ -9,3 +9,9 @@ C:\TAFE_2023\5C#W_Assignment_NEW\EnrolmentClassLibrary\EnrolmentClassLibrary\obj
 C:\TAFE_2023\5C#W_Assignment_NEW\EnrolmentClassLibrary\EnrolmentClassLibrary\obj\Debug\EnrolmentClassLibrary.pdb
 C:\TAFE_2023\5C#W_Assignment_NEW\EnrolmentClassLibrary\EnrolmentClassLibrary\bin\Debug\EnrolmentClassLibrary.exe
 C:\TAFE_2023\5C#W_Assignment_NEW\EnrolmentClassLibrary\EnrolmentClassLibrary\obj\Debug\EnrolmentClassLibrary.exe
+C:\TAFE_2023\5C#W_Assignment_NEW\TafeEnrolmentSystemRepos\EnrolmentClassLibrary\EnrolmentClassLibrary\bin\Debug\EnrolmentClassLibrary.exe
+C:\TAFE_2023\5C#W_Assignment_NEW\TafeEnrolmentSystemRepos\EnrolmentClassLibrary\EnrolmentClassLibrary\bin\Debug\EnrolmentClassLibrary.pdb
+C:\TAFE_2023\5C#W_Assignment_NEW\TafeEnrolmentSystemRepos\EnrolmentClassLibrary\EnrolmentClassLibrary\obj\Debug\EnrolmentClassLibrary.csproj.AssemblyReference.cache
+C:\TAFE_2023\5C#W_Assignment_NEW\TafeEnrolmentSystemRepos\EnrolmentClassLibrary\EnrolmentClassLibrary\obj\Debug\EnrolmentClassLibrary.csproj.CoreCompileInputs.cache
+C:\TAFE_2023\5C#W_Assignment_NEW\TafeEnrolmentSystemRepos\EnrolmentClassLibrary\EnrolmentClassLibrary\obj\Debug\EnrolmentClassLibrary.exe
+C:\TAFE_2023\5C#W_Assignment_NEW\TafeEnrolmentSystemRepos\EnrolmentClassLibrary\EnrolmentClassLibrary\obj\Debug\EnrolmentClassLibrary.pdb
