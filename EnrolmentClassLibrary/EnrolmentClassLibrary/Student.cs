@@ -36,6 +36,11 @@ namespace EnrolmentClassLibrary
             return !object.Equals(x, y);
         }
 
+        public bool Equals(Student otherStudent)
+        {
+            return this.Student_Id == otherStudent.Student_Id && this.Name == otherStudent.Name;
+        }
+
 
         public override bool Equals(object obj)
         {
@@ -55,6 +60,41 @@ namespace EnrolmentClassLibrary
         public override int GetHashCode()
         {
             return this.Student_Id.GetHashCode() ^ this.Name.GetHashCode();
+        }
+
+        public int CompareTo(object obj)
+        {
+            if (obj == null)
+                throw new ArgumentNullException("obj");
+            if (!(obj is Student))
+                throw new ArgumentException("Expected student instance", "obj");
+            return CompareTo((Student)obj);
+        }
+
+        public int CompareTo(Student otherStudent)
+        {
+            return this.Student_Id.CompareTo(otherStudent.Student_Id);
+        }
+
+
+        public static bool operator <(Student x, Student y)
+        {
+            return x.Student_Id < y.Student_Id;
+        }
+
+        public static bool operator <=(Student x, Student y)
+        {
+            return x.Student_Id <= y.Student_Id;
+        }
+
+        public static bool operator >(Student x, Student y)
+        {
+            return x.Student_Id > y.Student_Id;
+        }
+
+        public static bool operator >=(Student x, Student y)
+        {
+            return x.Student_Id >= y.Student_Id;
         }
 
 

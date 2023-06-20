@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace EnrolmentClassLibrary
 {
-    public class Course
+    public class Course : IComparable<Course>, IComparable
     {
-        public string CourseCode { get; set; }
+        public int CourseCode { get; set; }
         public string CourseName { get; set; }
         public double Cost { get; set; }
 
-        public Course(string _coursecode, string _coursename, double _cost)
+
+        public Course(int _coursecode, string _coursename, double _cost)
         {
             CourseCode = _coursecode;
             CourseName = _coursename;
             Cost = _cost;
         }
-
 
         public static bool operator == (Course x, Course y)
         {
@@ -30,6 +30,10 @@ namespace EnrolmentClassLibrary
             return !object.Equals(x, y);
         }
 
+        public bool Equals(Course otherCourse)
+        {
+            return this.CourseCode == otherCourse.CourseCode;
+        }
 
         public override bool Equals(object obj)
         {
@@ -49,15 +53,55 @@ namespace EnrolmentClassLibrary
             return this.CourseCode.GetHashCode();
         }
 
+
+        public int CompareTo(object obj)
+        {
+            if (obj == null)
+                throw new ArgumentNullException("obj");
+            if (!(obj is Course))
+                throw new ArgumentException("Expected course instance", "obj");
+            return CompareTo((Course)obj);
+        }
+
+        public int CompareTo(Course otherCourse)
+        {
+            return this.CourseCode.CompareTo(otherCourse.CourseCode);
+        }
+
+
+        public static bool operator <(Course x, Course y)
+        {
+            return x.CourseCode < y.CourseCode;
+        }
+
+        public static bool operator <=(Course x, Course y)
+        {
+            return x.CourseCode <= y.CourseCode;
+        }
+
+        public static bool operator >(Course x, Course y)
+        {
+            return x.CourseCode > y.CourseCode;
+        }
+
+        public static bool operator >=(Course x, Course y)
+        {
+            return x.CourseCode >= y.CourseCode;
+        }
+
+
+
+        // ToString  
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            
+
             sb.AppendLine("Course Code: " + CourseCode);
             sb.AppendLine("Course Name: " + CourseName);
             sb.AppendLine("Cost: " + Cost.ToString());
-            
+
             return sb.ToString();
         }
+
     }
 }

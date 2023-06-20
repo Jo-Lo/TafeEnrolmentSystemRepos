@@ -8,7 +8,7 @@ namespace EnrolmentClassLibrary
 {
     public class Utility
     {
-        static void bubble_sort_asc<T>(List<T> _list) where T : IComparable<T>
+        public static void bubble_sort_asc<T>(List<T> _list) where T : IComparable<T>
         {
 
             for (int j = 0; j <= _list.Count - 2; j++)
@@ -27,7 +27,7 @@ namespace EnrolmentClassLibrary
 
         }
 
-        static void bubble_sort_dsc<T>(List<T> _list) where T : IComparable<T>
+         public static void bubble_sort_dsc<T>(List<T> _list) where T : IComparable<T>
         {
 
             for (int j = 0; j <= _list.Count - 2; j++)

@@ -23,12 +23,12 @@ namespace EnrolmentClassLibrary
             Console.WriteLine(s1);
 
             Console.WriteLine("Testing Course obejct");
-            Course c1 = new Course("DADA", "Defence Against the Dark Arts", 150.53);
+            Course c1 = new Course(666, "Defence Against the Dark Arts", 150.53);
             Console.WriteLine(c1);
 
             Console.WriteLine("Testing Course obejcts are equal");
-            Course c2 = new Course("HERB", "Herbology", 127.45);
-            Course c3 = new Course("DADA", "Defence Against the Dark Arts", 150.53);
+            Course c2 = new Course(4328, "Herbology", 127.45);
+            Course c3 = new Course(666, "Defence Against the Dark Arts", 150.53);
 
             Console.WriteLine(c1 == c2);
             Console.WriteLine(c1.Equals(c2));
@@ -65,12 +65,40 @@ namespace EnrolmentClassLibrary
             cList.Add(c1);
             cList.Add(c2);
             cList.Add(c3);
-            cList.Add(new Course ("POTS", "Potions", 154.32));
-            cList.Add(new Course("TRAN", "Transfiguration", 233.45));
-            cList.Add(new Course ("MUGL", "Muggle Studies", 100.23));
+            cList.Add(new Course (9075, "Potions", 154.32));
+            cList.Add(new Course(7249, "Transfiguration", 233.45));
+            cList.Add(new Course (0097, "Muggle Studies", 100.23));
 
-             bubble_sort_asc();
-    
+            print(cList);
+            bubble_sort_asc(cList);
+
+            Console.WriteLine("\nTesting compareTo of CourseCode");
+            // comparing courseCode type of INT
+            
+            // comparing course 1 to 2 >> returns -1
+            Console.WriteLine(c1.CompareTo(c2));
+            // comparing course 1 to 3 >> returns 0
+            Console.WriteLine(c1.CompareTo(c3));
+
+            // comparing course 1 is greater than course 2 >> returns false
+            Console.WriteLine("c1 > c2");
+            Console.WriteLine(c1 > c2);
+
+            // comparing course 1 is equal to course 3 >> returns true
+            Console.WriteLine("c1 == c3");
+            Console.WriteLine(c1 == c3);
+
+
+            Console.WriteLine("\nTesting compareTo of CourseCode");
+            // comparing studentId type of INT
+
+            // comparing student 1 to student 2 >> returns -1
+            Student s2 = new Student("Hermione", "hgranger@email.com", "123456781", 1235, "Dip C#", "01/01/23");
+            Console.WriteLine(s1.CompareTo(s2));
+
+            // comparing student 1 is greater than student 2 >> returns false
+            Console.WriteLine(s1 > s2);
+
 
 
             Console.ReadLine();
