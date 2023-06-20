@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EnrolmentClassLibrary
 {
-    public class Student: Person
+    public class Student: Person, IComparable<Student>, IComparable
     {
         public int Student_Id { get; set; }
         public string Program { get; set; }

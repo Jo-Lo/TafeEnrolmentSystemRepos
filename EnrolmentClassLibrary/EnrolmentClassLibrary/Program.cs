@@ -64,15 +64,25 @@ namespace EnrolmentClassLibrary
 
             cList.Add(c1);
             cList.Add(c2);
-            cList.Add(c3);
-            cList.Add(new Course (9075, "Potions", 154.32));
-            cList.Add(new Course(7249, "Transfiguration", 233.45));
+            //cList.Add(c3);
+            Course c4 = new Course(9075, "Potions", 154.32);
+            cList.Add(c4);
+
+            Course c5 = new Course(7249, "Transfiguration", 233.45);
+            cList.Add(c5);
+            
             cList.Add(new Course (0097, "Muggle Studies", 100.23));
 
+            Console.WriteLine("\nCourse list");
             print(cList);
-            bubble_sort_asc(cList);
 
-            Console.WriteLine("\nTesting compareTo of CourseCode");
+            Console.WriteLine("\nbubble sort ascending");
+            bubble_sort_asc(cList);
+            print(cList);
+
+
+
+            Console.WriteLine("\nTesting compareTo of Course");
             // comparing courseCode type of INT
             
             // comparing course 1 to 2 >> returns -1
@@ -89,7 +99,7 @@ namespace EnrolmentClassLibrary
             Console.WriteLine(c1 == c3);
 
 
-            Console.WriteLine("\nTesting compareTo of CourseCode");
+            Console.WriteLine("\nTesting compareTo of Student");
             // comparing studentId type of INT
 
             // comparing student 1 to student 2 >> returns -1
@@ -99,7 +109,11 @@ namespace EnrolmentClassLibrary
             // comparing student 1 is greater than student 2 >> returns false
             Console.WriteLine(s1 > s2);
 
+            Console.WriteLine("\nSorted");
+            print(cList);
+            Console.WriteLine(MyBinarySearch(cList, c5));
 
+            Console.WriteLine(MySequentialSearch(cList, c4));
 
             Console.ReadLine();
         }
