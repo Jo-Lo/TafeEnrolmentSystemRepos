@@ -56,7 +56,8 @@ namespace EnrolmentClassLibrary
 
         // I have selected to hash Student ID and Name
         // because student id is unique and a student must require a name in the system
-        // I assume a student may not supply an email or Telephone number
+        // I assume a student may not supply an Email or Telephone Number
+
         public override int GetHashCode()
         {
             return this.Student_Id.GetHashCode() ^ this.Name.GetHashCode();

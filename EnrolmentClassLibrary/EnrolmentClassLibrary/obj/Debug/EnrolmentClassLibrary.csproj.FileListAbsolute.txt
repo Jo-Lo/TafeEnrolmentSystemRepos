@@ -24,4 +24,3 @@ C:\TAFE_2023\5C#W_Assignment_NEW\TafeEnrolmentSystemRepos\EnrolmentClassLibrary\
 C:\TAFE_2023\5C#W_Assignment_NEW\TafeEnrolmentSystemRepos\EnrolmentClassLibrary\EnrolmentClassLibrary\bin\Debug\nunit.framework.dll
 C:\TAFE_2023\5C#W_Assignment_NEW\TafeEnrolmentSystemRepos\EnrolmentClassLibrary\EnrolmentClassLibrary\bin\Debug\nunit.framework.xml
 C:\TAFE_2023\5C#W_Assignment_NEW\TafeEnrolmentSystemRepos\EnrolmentClassLibrary\EnrolmentClassLibrary\obj\Debug\EnrolmentClassLibrary.csproj.CopyComplete
-C:\TAFE_2023\5C#W_Assignment_NEW\TafeEnrolmentSystemRepos\EnrolmentClassLibrary\EnrolmentClassLibrary\obj\Debug\EnrolmentClassLibrary.csproj.AssemblyReference.cache
