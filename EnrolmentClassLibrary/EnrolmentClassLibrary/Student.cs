@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EnrolmentClassLibrary
 {
-    public class Student: Person
+    public class Student: Person, IComparable<Student>, IComparable
     {
         public int Student_Id { get; set; }
         public string Program { get; set; }
@@ -36,6 +36,11 @@ namespace EnrolmentClassLibrary
             return !object.Equals(x, y);
         }
 
+        public bool Equals(Student otherStudent)
+        {
+            return this.Student_Id == otherStudent.Student_Id && this.Name == otherStudent.Name;
+        }
+
 
         public override bool Equals(object obj)
         {
@@ -55,6 +60,43 @@ namespace EnrolmentClassLibrary
         public override int GetHashCode()
         {
             return this.Student_Id.GetHashCode() ^ this.Name.GetHashCode();
+        }
+
+        public int CompareTo(object obj)
+        {
+            if (obj == null)
+                throw new ArgumentNullException("obj");
+            if (!(obj is Student))
+                throw new ArgumentException("Expected student instance", "obj");
+            return CompareTo((Student)obj);
+        }
+
+
+        //made to compare student name
+        public int CompareTo(Student otherStudent)
+        {
+            return this.Name.CompareTo(otherStudent.Name);
+        }
+
+
+        public static bool operator <(Student x, Student y)
+        {
+            return x.Student_Id < y.Student_Id;
+        }
+
+        public static bool operator <=(Student x, Student y)
+        {
+            return x.Student_Id <= y.Student_Id;
+        }
+
+        public static bool operator >(Student x, Student y)
+        {
+            return x.Student_Id > y.Student_Id;
+        }
+
+        public static bool operator >=(Student x, Student y)
+        {
+            return x.Student_Id >= y.Student_Id;
         }
 
 

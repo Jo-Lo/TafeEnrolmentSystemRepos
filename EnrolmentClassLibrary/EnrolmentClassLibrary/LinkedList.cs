@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace EnrolmentClassLibrary
 {
-
     public class LinkedList<T> : System.Collections.Generic.ICollection<T>
     {
         public LinkedListNode<T> Head
@@ -214,5 +213,7 @@ namespace EnrolmentClassLibrary
                 current = current.Next;
             }
         }
+
+
     }
 }
