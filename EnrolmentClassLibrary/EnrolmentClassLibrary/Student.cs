@@ -71,9 +71,11 @@ namespace EnrolmentClassLibrary
             return CompareTo((Student)obj);
         }
 
+
+        //made to compare student name
         public int CompareTo(Student otherStudent)
         {
-            return this.Student_Id.CompareTo(otherStudent.Student_Id);
+            return this.Name.CompareTo(otherStudent.Name);
         }
 
 
